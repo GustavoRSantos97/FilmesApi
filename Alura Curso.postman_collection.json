@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "9f986cd5-f366-42c0-8e5d-816b454562fd",
+		"name": "Alura Curso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20912116"
+	},
+	"item": [
+		{
+			"name": "Adicionar filme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\": \"Naruto\",\r\n    \"Genero\": \"Anime\",\r\n    \"Duracao\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7118/filme",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7118",
+					"path": [
+						"filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar filmes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7118/Filme",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7118",
+					"path": [
+						"Filme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar filme (Atualizar todo o objeto)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Titulo\": \"Naruto\",\r\n    \"Genero\": \"Anime\",\r\n    \"Duracao\": 72\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7118/Filme/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7118",
+					"path": [
+						"Filme",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar filme (Atualizar parcial)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\": \"/duracao\",\r\n        \"value\": 70\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7118/Filme/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7118",
+					"path": [
+						"Filme",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar filme",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7118/Filme/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7118",
+					"path": [
+						"Filme",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
